@@ -1,10 +1,12 @@
 var chai = require('chai');
 var expect = chai.expect;
+var plugin = require('./');
 
 describe('Escher Request Js', function() {
 
-  it('dummy test', function() {
-    expect(1).to.eql(1);
+  it('should gives back the given request', function() {
+    var givenRequest = {};
+    expect(plugin('key', 'secret')(givenRequest)).to.equal(givenRequest);
   });
 
 });
